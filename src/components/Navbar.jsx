@@ -13,15 +13,15 @@ export default function Navbar() {
                     <Link to="/">CryptoVerse</Link>
                 </Typography.Title>
             </div>    
-                <Menu them="dark">
+                <Menu theme="dark">
                     <Menu.Item icon={<HomeOutlined/>}>
-                        <Link to="/Home">Home</Link>
+                        <Link to="/">Home</Link>
                     </Menu.Item>
                     <Menu.Item icon={<FundOutlined/>}>
-                        <Link to="/cryptocourrencies">Cryptocurrencies</Link>
+                        <Link to="/cryptocurrencies">Cryptocurrencies</Link>
                     </Menu.Item>
                     <Menu.Item icon={<MoneyCollectOutlined/>}>
-                        <Link to="/exchnage">Exchange</Link>
+                        <Link to="/exchange">Exchange</Link>
                     </Menu.Item>
                     <Menu.Item icon={<BulbOutlined/>}>
                         <Link to="/news">News</Link>
