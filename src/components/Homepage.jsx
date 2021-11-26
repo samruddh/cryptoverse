@@ -8,7 +8,7 @@ import { News, Cryptocurrencies } from "../components";
 const {Title} = Typography;
 export default function Homepage() {
     
-    const { data, isFetching} = useGetCryptosQuery();
+    const { data, isFetching} = useGetCryptosQuery(1);
     const globalStats = data?.data?.stats;
 
     if(isFetching) return 'Loading...';
@@ -25,12 +25,12 @@ export default function Homepage() {
             <Col span={12}><Statistic title="Total Market" value={millify(globalStats.totalMarkets)}/></Col>
         </Row>
         <div className="home-heading-container">
-            <Title level={2} className="home-title">Top Cryptocurrencies in the world</Title>
+            <Title level={2} className="home-title">Top Cryptocurrencies in the World:</Title>
             <Title level={3} className="show-more"><Link to='/cryptocurrencies'>Show more</Link></Title>
         </div>
         <Cryptocurrencies simplified/>
         <div className="home-heading-container">
-            <Title level={2} className="home-title">Latest Crypto News</Title>
+            <Title level={2} className="home-title">Latest Crypto News:</Title>
             <Title level={3} className="show-more"><Link to='/news'>Show more</Link></Title>
         </div>
         <News simplified/>
