@@ -26,7 +26,7 @@ export default function Navbar() {
         else{
             setActiveMenu(true)
         }
-    },[setScreenSize])
+    },[screenSize])
 
     return (
         <div className="nav-container">
@@ -39,7 +39,7 @@ export default function Navbar() {
                     <MenuOutlined/>
                 </Button>
             </div>   
-            {   ativeMenu && (
+            {  ativeMenu  && (
                 <Menu theme="dark">
                     <Menu.Item icon={<HomeOutlined/>}>
                         <Link to="/">Home</Link>
